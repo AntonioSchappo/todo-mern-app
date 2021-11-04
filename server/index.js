@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors);
 
 app.get('/tasks', Task.getAll);
-app.post('/task', Task.create);
+app.post('/tasks', Task.create);
 app.put('/tasks:id', Taks.update);
 app.delete('/tasks:id', Task.remove);
 
