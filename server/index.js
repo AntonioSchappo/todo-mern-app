@@ -1,8 +1,9 @@
+const { connection } = require('./models/db');
 const cors = require('cors');
 const express = require('express');
 
 const app = express();
-
+connection();
 app.use(express.json());
 app.use(cors);
 
