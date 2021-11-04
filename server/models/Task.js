@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const taskSchema = new Schema({
     taskTitle: { type: String, required: true },
     taskDescription: { type: String, required: true },
-    completed: { type: Boolean, default: false },
+    status: { type: String, enum: ['pendente', 'em andamento', 'pronto'], default: 'pendente' },
     dateCreated: { type: Date, default: Date.now }
 })
 
